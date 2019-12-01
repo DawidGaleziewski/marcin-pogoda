@@ -1,0 +1,188 @@
+html,
+body {
+  /* background-color: #d8c99b; */
+  font-size: 14px;
+  text-align: left;
+  font-family: verdana;
+  font-family: 'Roboto', sans-serif;
+}
+#container {
+  box-shadow: -1px 7px 11px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  padding: 2rem;
+  width: 1000px;
+  margin: 0 auto;
+  background: #273e47;
+  z-index: 20;
+}
+header {
+  box-shadow: inset -1px 7px 11px 0px rgba(0, 0, 0, 0.75);
+  border: 0.5px solid #000;
+  border-radius: 5px 5px 0 0;
+  background: #a4243b;
+  color: #6cab16;
+  height: 120px;
+  padding: 10px;
+}
+
+.nav-main {
+  display: inline-block;
+  margin: 1rem 0 1rem 60rem;
+}
+.nav-main ul {
+  margin: 0;
+  display: inline-block;
+  border: 1px solid #d8973c;
+  margin: 0;
+  padding: 0;
+}
+
+.snowflake {
+  animation: snowflake-animation 3s 1s infinite;
+}
+
+.nav-main__item {
+  position: relative;
+  list-style: none;
+  padding: 5px;
+  text-transform: uppercase;
+  background-color: #d8c99b;
+  color: #273e47;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in, transform 0.5s ease-in,
+    transform 0.5s ease-in;
+  border: 1px solid #273e47;
+}
+
+.nav-main__item:hover {
+  background-color: #273e47;
+  color: #d8c99b;
+  transform: scale(1.4);
+}
+
+.nav-main__item:hover::after {
+  animation: snowflake-animation 2s 0s infinite;
+  width: 20px;
+  height: 20px;
+  content: url('./snowflake.svg');
+  top: -20px;
+  left: -40px;
+  position: absolute;
+  transition: transform 5s ease-in;
+}
+
+#logo {
+  width: 160px;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+}
+
+.cloud {
+  animation: cloud-animation 3s 1s infinite;
+}
+
+#firsttitle {
+  display: inline-block;
+  width: 800px;
+  height: 100px;
+  padding: 30px 10px 10px 10px;
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+  color: #bd632f;
+  text-shadow: 3px 3px 9px #000;
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+footer {
+  box-shadow: inset -1px 7px 11px 0px rgba(0, 0, 0, 0.75);
+  border: 0.5px solid #000;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  font-size: 18px;
+  background: #bd632f;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.footer-description {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #a4243b;
+  font-weight: bold;
+}
+
+@keyframes cloud-animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes snowflake-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  z-index: -1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
