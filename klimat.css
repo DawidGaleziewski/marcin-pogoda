@@ -26,12 +26,11 @@ header {
 }
 
 .nav-main {
-  display: inline-block;
-  margin: 1rem 0 1rem 60rem;
+  display: block;
 }
 .nav-main ul {
   margin: 0;
-  display: inline-block;
+  display: flex;
   border: 1px solid #d8973c;
   margin: 0;
   padding: 0;
@@ -84,9 +83,6 @@ header {
 }
 
 #firsttitle {
-  display: inline-block;
-  width: 800px;
-  height: 100px;
   padding: 30px 10px 10px 10px;
   text-align: center;
   font-size: 44px;
@@ -95,11 +91,11 @@ header {
   text-shadow: 3px 3px 9px #000;
 }
 
-.typewriter {
+/* .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   white-space: nowrap;
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
+} */
 
 footer {
   box-shadow: inset -1px 7px 11px 0px rgba(0, 0, 0, 0.75);
