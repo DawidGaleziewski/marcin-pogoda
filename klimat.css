@@ -43,6 +43,11 @@ header {
   padding: 0;
 }
 
+.nav-main ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .snowflake {
   animation: snowflake-animation 3s 1s infinite;
 }
